@@ -12,6 +12,7 @@ const getPosts = (dir = 'posts') => {
 
 const dailyPosts = getPosts('daily')
 
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Island",
