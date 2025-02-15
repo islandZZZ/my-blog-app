@@ -42,5 +42,6 @@ export default defineConfig({
       },
       lineNumbers: true // 显示代码行号
     }
-  }
+  },
+  outDir: '../public'
 })
