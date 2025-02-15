@@ -1,0 +1,39 @@
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]  # 监听 main 分支的推送
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 使用最新 Ubuntu 系统
+
+    steps:
+      # 步骤 1：拉取代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史（可选）
+
+      # 步骤 2：安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # 指定 Node 版本
+          cache: 'npm'        # 缓存 npm 依赖
+
+      # 步骤 3：安装依赖并构建
+      - name: Install and build
+        run: |
+          npm install
+          npm run docs:build  # 你的构建命令
+
+      # 步骤 4：部署到 GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动使用 GitHub Token
+          publish_dir: ./public  # 你的构建目录
+          keep_files: false      # 清空旧文件
+          force_orphan: true     # 强制使用单次提交
