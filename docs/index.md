@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Island"
-  text: "My Log"
+  text: "My Log ~"
   tagline: My great project tagline
   actions:
     - theme: brand
