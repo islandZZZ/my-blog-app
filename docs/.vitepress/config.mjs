@@ -16,6 +16,7 @@ const dailyPosts = getPosts('daily')
 export default defineConfig({
   title: "Island",
   description: "My Log",
+  base: '/my-blog-app/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
