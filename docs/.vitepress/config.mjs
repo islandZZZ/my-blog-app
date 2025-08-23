@@ -21,7 +21,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: dailyPosts[0].link },
+      { text: '查看日志', link: dailyPosts[0].link },
       // { text: 'Examples', link: '/markdown-examples' }
     ],
     sidebar: [

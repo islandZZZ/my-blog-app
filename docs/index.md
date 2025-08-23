@@ -4,22 +4,12 @@ layout: home
 
 hero:
   name: "Island"
-  text: "My Log ~"
-  tagline: My great project tagline
-  # actions:
-  #   - theme: brand
-  #     text: Markdown Examples
-  #     link: /markdown-examples
-  #   - theme: alt
-  #     text: API Examples
-  #     link: /api-examples
+  text: "协同记录"
+  tagline: 加油搞钱~
+  actions:
+    - theme: brand
+      text: 查看日志
+      link: /daily/01%E5%A6%82%E4%BD%95%E5%81%9A%E8%99%8E%E6%89%91%E8%A7%86%E9%A2%91.html
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
