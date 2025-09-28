@@ -25,7 +25,7 @@ const runCommand = (command, args, callback) => {
   });
 
   cmd.stderr.on("data", (data) => {
-    console.error(`stderr: ${data}`);
+    console.error(`${data}`);
   });
 
   cmd.on("close", (code) => {
